@@ -8,6 +8,10 @@ projects:
       type: git
       location: 'https://github.com/spring-projects/spring-petclinic.git'
 components:
+  - type: cheEditor
+    alias: che-theia
+    reference: https://raw.githubusercontent.com/chepullreq4/pr-check-files/master/che/pr-master/che_theia_meta.yaml
+    memoryLimit: 768Mi
   - type: kubernetes
     alias: petclinic-web
     reference: https://raw.githubusercontent.com/eclipse/che/master/e2e/files/happy-path/containers-happy-path.yaml
@@ -32,9 +36,6 @@ components:
         value: /home/user/.m2
     memoryLimit: 2Gi
     mountSources: true
-  - type: chePlugin
-    alias: java8
-    reference: https://raw.githubusercontent.com/chepullreq4/pr-check-files/master/che/pr-master/java8_meta.yaml
 commands:
   - name: build
     actions:
