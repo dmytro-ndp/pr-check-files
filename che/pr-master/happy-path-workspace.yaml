@@ -32,9 +32,6 @@ components:
         value: /home/user/.m2
     memoryLimit: 2Gi
     mountSources: true
-  - type: chePlugin
-    alias: java8
-    reference: https://raw.githubusercontent.com/chepullreq4/pr-check-files/master/che/pr-master/java8_meta.yaml
 commands:
   - name: build
     actions:
