@@ -39,12 +39,6 @@ components:
   - type: chePlugin
     alias: java8
     reference: https://raw.githubusercontent.com/chepullreq4/pr-check-files/master/che/pr-master/java8_meta.yaml
-  - type: chePlugin
-    alias: vscode_yaml
-    reference: https://raw.githubusercontent.com/chepullreq4/pr-check-files/master/che/pr-master/vscode_yaml_meta.yaml
-  - type: chePlugin
-    alias: vscode_kubernetes_tools
-    reference: https://raw.githubusercontent.com/chepullreq4/pr-check-files/master/che/pr-master/vscode_kubernetes_tools_meta.yaml
 commands:
   - name: build
     actions:
