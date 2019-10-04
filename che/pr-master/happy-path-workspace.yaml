@@ -22,7 +22,7 @@ components:
     volumes:
       - name: m2
         containerPath: /home/user/.m2
-    alias: tools
+    alias: maven-container
     image: 'quay.io/eclipse/che-java8-maven:nightly'
     env:
       - value: >-
