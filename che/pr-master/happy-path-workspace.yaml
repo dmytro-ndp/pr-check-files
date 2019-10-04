@@ -10,30 +10,43 @@ projects:
 components:
   - type: cheEditor
     id: eclipse/che-theia/next
+  - type: kubernetes
+    alias: petclinic-web
+    reference: https://raw.githubusercontent.com/eclipse/che/master/e2e/files/happy-path/containers-happy-path.yaml
+    selector:
+      app.kubernetes.io/component: webapp
+    entrypoints:
+      - containerName: spring-boot
+        command: ["tail"]
+        args: ["-f", "/dev/null"]
+  - type: kubernetes
+    alias: petclinic-db
+    reference: https://raw.githubusercontent.com/eclipse/che/master/e2e/files/happy-path/containers-happy-path.yaml
+    selector:
+      app.kubernetes.io/component: database
   - id: redhat/java/latest
     memoryLimit: 1512Mi
     type: chePlugin
-  - mountSources: true
+  - image: 'quay.io/eclipse/che-java8-maven:nightly'
+    alias: maven-container
+    memoryLimit: 768Mi
+    volumes:
+      - containerPath: /home/user/.m2
+        name: m2
     endpoints:
       - name: 8080/tcp
         port: 8080
-    memoryLimit: 768Mi
-    type: dockerimage
-    volumes:
-      - name: m2
-        containerPath: /home/user/.m2
-    alias: maven-container
-    image: 'quay.io/eclipse/che-java8-maven:nightly'
+    mountSources: true
     env:
-      - value: >-
+      - name: JAVA_OPTS
+        value: >-
           -XX:MaxRAMPercentage=50.0 -XX:+UseParallelGC -XX:MinHeapFreeRatio=10
           -XX:MaxHeapFreeRatio=20 -XX:GCTimeRatio=4
           -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true
           -Xms20m -Djava.security.egd=file:/dev/./urandom -Duser.home=/home/user
-        name: JAVA_OPTS
-      - value: $(JAVA_OPTS)
-        name: MAVEN_OPTS
-apiVersion: 1.0.0
+      - name: MAVEN_OPTS
+        value: $(JAVA_OPTS)
+    type: dockerimage
 commands:
   - name: build
     actions:
