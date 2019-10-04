@@ -33,6 +33,7 @@ components:
     env:
       - name: MAVEN_CONFIG
         value: /home/user/.m2
+    memoryLimit: 2Gi
     mountSources: true
   - type: chePlugin
     id: redhat/java/latest
