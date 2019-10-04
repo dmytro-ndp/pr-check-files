@@ -10,7 +10,6 @@ projects:
 components:
   - type: cheEditor
     id: eclipse/che-theia/next
-    memoryLimit: 512Mi
   - type: kubernetes
     alias: petclinic-web
     reference: https://raw.githubusercontent.com/eclipse/che/master/e2e/files/happy-path/containers-happy-path.yaml
@@ -33,7 +32,7 @@ components:
     env:
       - name: MAVEN_CONFIG
         value: /home/user/.m2
-    memoryLimit: 2Gi
+    memoryLimit: 512Mi
     mountSources: true
   - type: chePlugin
     id: redhat/java/latest
