@@ -24,16 +24,6 @@ components:
     reference: https://raw.githubusercontent.com/eclipse/che/master/e2e/files/happy-path/containers-happy-path.yaml
     selector:
       app.kubernetes.io/component: database
-  - type: dockerimage
-    alias: maven-container
-    image: bujhtr5555/maven-with-artifacts:latest
-    command: ['sleep']
-    args: ['infinity']
-    env:
-      - name: MAVEN_CONFIG
-        value: /home/user/.m2
-    memoryLimit: 512Mi
-    mountSources: true
   - type: chePlugin
     id: redhat/java/latest
   - type: chePlugin
