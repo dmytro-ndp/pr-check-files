@@ -10,7 +10,7 @@ projects:
 components:
   - type: cheEditor
     alias: che-theia
-    reference: https://raw.githubusercontent.com/chepullreq4/pr-check-files/master/che/pr-410/che_theia_meta.yaml
+    reference: https://raw.githubusercontent.com/chepullreq4/pr-check-files/master/che-theia/pr-410/che_theia_meta.yaml
     memoryLimit: 768Mi
   - type: kubernetes
     alias: petclinic-web
@@ -38,13 +38,13 @@ components:
     mountSources: true
   - type: chePlugin
     alias: java8
-    reference: https://raw.githubusercontent.com/chepullreq4/pr-check-files/master/che/pr-410/java8_meta.yaml
+    reference: https://raw.githubusercontent.com/chepullreq4/pr-check-files/master/che-theia/pr-410/java8_meta.yaml
   - type: chePlugin
     alias: vscode_yaml
-    reference: https://raw.githubusercontent.com/chepullreq4/pr-check-files/master/che/pr-410/vscode_yaml_meta.yaml
+    reference: https://raw.githubusercontent.com/chepullreq4/pr-check-files/master/che-theia/pr-410/vscode_yaml_meta.yaml
   - type: chePlugin
     alias: vscode_kubernetes_tools
-    reference: https://raw.githubusercontent.com/chepullreq4/pr-check-files/master/che/pr-410/vscode_kubernetes_tools_meta.yaml
+    reference: https://raw.githubusercontent.com/chepullreq4/pr-check-files/master/che-theia/pr-410/vscode_kubernetes_tools_meta.yaml
 commands:
   - name: build
     actions:
