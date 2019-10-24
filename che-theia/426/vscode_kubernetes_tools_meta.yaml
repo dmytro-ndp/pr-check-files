@@ -12,7 +12,7 @@ category: Other
 firstPublicationDate: "2019-10-16"
 spec:
   containers:
-  - image: maxura/che-remote-plugin-kubernetes-tooling-1.0.0:426
+  - image: maxura/che-remote-plugin-kubernetes-tooling-1.0.4:426
     name: vscode-kubernetes-tools
     memoryLimit: 1G
   extensions:
