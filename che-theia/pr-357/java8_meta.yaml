@@ -1,7 +1,7 @@
 apiVersion: v2
 publisher: redhat
 name: java8
-version: latest
+version: 0.50.0
 type: VS Code extension
 displayName: Language Support for Java 8
 title: Language Support for Java(TM) by Red Hat
