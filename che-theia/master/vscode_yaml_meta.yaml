@@ -14,7 +14,7 @@ category: Language
 firstPublicationDate: "2019-04-19"
 spec:
   containers:
-  - image: maxura/che-theia-endpoint-runtime:master
+  - image: maxura/che-remote-plugin-node:master
     name: vscode-yaml
     memoryLimit: 256Mi
   extensions:
