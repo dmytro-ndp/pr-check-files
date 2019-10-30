@@ -1,7 +1,7 @@
 apiVersion: v2
 publisher: redhat
 name: vscode-yaml
-version: latest
+version: 0.4.0
 type: VS Code extension
 displayName: YAML
 title: YAML Language Support by Red Hat, with built-in Kubernetes and Kedge syntax
@@ -14,7 +14,7 @@ category: Language
 firstPublicationDate: "2019-04-19"
 spec:
   containers:
-  - image: maxura/che-theia-endpoint-runtime:505
+  - image: maxura/che-remote-plugin-node:505
     name: vscode-yaml
     memoryLimit: 256Mi
   extensions:
