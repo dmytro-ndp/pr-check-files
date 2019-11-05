@@ -4,6 +4,12 @@ metadata:
   generateName: pr-che_theia-426-
 attributes:
   persistVolumes: 'false'
+projects:
+  - name: pr-426
+    source:
+      type: git
+      location: 'https://github.com/eclipse/che-theia.git'
+      branch: 'che-13326'
 components:
   - reference: https://raw.githubusercontent.com/chepullreq4/pr-check-files/master/che-theia/pr-426/simple/che-theia-editor.yaml
     type: cheEditor
