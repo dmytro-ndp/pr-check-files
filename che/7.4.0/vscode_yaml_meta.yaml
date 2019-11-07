@@ -14,7 +14,7 @@ category: Language
 firstPublicationDate: "2019-04-19"
 spec:
   containers:
-  - image: eclipse/che-theia-endpoint-runtime:7.4.0
+  - image: eclipse/che-remote-plugin-node:7.4.0
     name: vscode-yaml
     memoryLimit: 256Mi
   extensions:
