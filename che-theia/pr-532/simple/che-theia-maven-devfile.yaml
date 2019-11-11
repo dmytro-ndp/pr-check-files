@@ -48,3 +48,5 @@ commands:
     component: maven
     command: mvn clean install && java -jar ./target/*.jar
     workdir: ${CHE_PROJECTS_ROOT}/console-java-simple
+attributes:
+  persistVolumes: "false"
