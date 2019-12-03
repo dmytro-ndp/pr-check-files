@@ -35,14 +35,9 @@ components:
     memoryLimit: 3Gi
     mountSources: true
   - type: chePlugin
-    alias: java8
-    reference: https://raw.githubusercontent.com/chepullreq4/pr-check-files/master/che-theia/master/java8_meta.yaml
+    id: redhat/java/latest
   - type: chePlugin
-    alias: vscode_yaml
-    reference: https://raw.githubusercontent.com/chepullreq4/pr-check-files/master/che-theia/master/vscode_yaml_meta.yaml
-  - type: chePlugin
-    alias: vscode_kubernetes_tools
-    reference: https://raw.githubusercontent.com/chepullreq4/pr-check-files/master/che-theia/master/vscode_kubernetes_tools_meta.yaml
+    id: redhat/vscode-yaml/latest
 commands:
   - name: build
     actions:
