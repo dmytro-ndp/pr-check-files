@@ -40,9 +40,6 @@ components:
   - type: chePlugin
     alias: vscode_yaml
     reference: https://raw.githubusercontent.com/chepullreq4/pr-check-files/master/che/7.3.3/vscode_yaml_meta.yaml
-  - type: chePlugin
-    alias: vscode_kubernetes_tools
-    reference: https://raw.githubusercontent.com/chepullreq4/pr-check-files/master/che/7.3.3/vscode_kubernetes_tools_meta.yaml
 commands:
   - name: build
     actions:
