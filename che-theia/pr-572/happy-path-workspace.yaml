@@ -14,7 +14,7 @@ components:
     memoryLimit: 768Mi
   - type: kubernetes
     alias: petclinic-web
-    reference: https://raw.githubusercontent.com/eclipse/che/master/e2e/files/happy-path/containers-happy-path.yaml
+    reference: https://raw.githubusercontent.com/eclipse/che/master/tests/e2e/files/happy-path/containers-happy-path.yaml
     selector:
       app.kubernetes.io/component: webapp
     entrypoints:
@@ -23,7 +23,7 @@ components:
         args: ["-f", "/dev/null"]
   - type: kubernetes
     alias: petclinic-db
-    reference: https://raw.githubusercontent.com/eclipse/che/master/e2e/files/happy-path/containers-happy-path.yaml
+    reference: https://raw.githubusercontent.com/eclipse/che/master/tests/e2e/files/happy-path/containers-happy-path.yaml
     selector:
       app.kubernetes.io/component: database
   - type: dockerimage
@@ -49,7 +49,7 @@ commands:
     actions:
       - type: exec
         component: maven-container
-        command: cd /projects/petclinic && mvn package >> build-output.txt && tail -n 40 /projects/petclinic/build-output.txt | grep 'BUILD SUCCESS' > /projects/petclinic/result-build-output.txt
+        command: cd /projects/petclinic && mvn package | tee build-output.txt && tail -n 40 /projects/petclinic/build-output.txt | grep 'BUILD SUCCESS' > /projects/petclinic/result-build-output.txt
   - name: run
     actions:
       - type: exec
