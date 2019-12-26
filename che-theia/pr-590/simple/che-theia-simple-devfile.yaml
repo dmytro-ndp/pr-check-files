@@ -1,0 +1,16 @@
+
+apiVersion: 1.0.0
+metadata:
+  generateName: pr-che_theia-590-
+attributes:
+  persistVolumes: 'false'
+projects:
+  - name: pr-590
+    source:
+      type: git
+      location: 'https://github.com/ibuziuk/che-theia.git'
+      branch: 'che-15469'
+components:
+  - reference: https://raw.githubusercontent.com/chepullreq4/pr-check-files/master/che-theia/pr-590/simple/che-theia-editor.yaml
+    type: cheEditor
+
