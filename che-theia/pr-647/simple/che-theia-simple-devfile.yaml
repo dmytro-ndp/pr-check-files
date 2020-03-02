@@ -1,0 +1,16 @@
+
+apiVersion: 1.0.0
+metadata:
+  generateName: pr-che_theia-647-
+attributes:
+  persistVolumes: 'false'
+projects:
+  - name: pr-647
+    source:
+      type: git
+      location: 'https://github.com/nickboldt/che-theia.git'
+      branch: 'consistent-ubi8-ref'
+components:
+  - reference: https://raw.githubusercontent.com/chepullreq4/pr-check-files/master/che-theia/pr-647/simple/che-theia-editor.yaml
+    type: cheEditor
+
