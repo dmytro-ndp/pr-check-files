@@ -1,0 +1,16 @@
+
+apiVersion: 1.0.0
+metadata:
+  generateName: pr-che_theia-759-
+attributes:
+  persistVolumes: 'false'
+projects:
+  - name: pr-759
+    source:
+      type: git
+      location: 'https://github.com/eclipse/che-theia.git'
+      branch: 'pr-master-update-base-images-1590009122'
+components:
+  - reference: https://raw.githubusercontent.com/chepullreq4/pr-check-files/master/che-theia/pr-759/simple/che-theia-editor.yaml
+    type: cheEditor
+
