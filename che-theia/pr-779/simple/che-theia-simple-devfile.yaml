@@ -1,0 +1,16 @@
+
+apiVersion: 1.0.0
+metadata:
+  generateName: pr-che_theia-779-
+attributes:
+  persistVolumes: 'false'
+projects:
+  - name: pr-779
+    source:
+      type: git
+      location: 'https://github.com/eclipse/che-theia.git'
+      branch: 'fix-rel-script'
+components:
+  - reference: https://raw.githubusercontent.com/chepullreq4/pr-check-files/master/che-theia/pr-779/simple/che-theia-editor.yaml
+    type: cheEditor
+
