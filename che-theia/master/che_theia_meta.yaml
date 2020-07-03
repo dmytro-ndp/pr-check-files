@@ -58,7 +58,7 @@ spec:
         discoverable: false
   containers:
    - name: theia-ide
-     image: "rnikitenko/che-theia:fixConnection"
+     image: "maxura/che-theia:790"
      env:
          - name: THEIA_PLUGINS
            value: local-dir:///plugins
