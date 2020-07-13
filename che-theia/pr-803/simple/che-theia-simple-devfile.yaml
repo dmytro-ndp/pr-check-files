@@ -1,0 +1,16 @@
+
+apiVersion: 1.0.0
+metadata:
+  generateName: pr-che_theia-803-
+attributes:
+  persistVolumes: 'false'
+projects:
+  - name: pr-803
+    source:
+      type: git
+      location: 'https://github.com/tsmaeder/che-theia.git'
+      branch: '13249_describe_sidecar_debug'
+components:
+  - reference: https://raw.githubusercontent.com/chepullreq4/pr-check-files/master/che-theia/pr-803/simple/che-theia-editor.yaml
+    type: cheEditor
+
