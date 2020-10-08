@@ -1,0 +1,16 @@
+
+apiVersion: 1.0.0
+
+  generateName: pr-che_theia-874-
+attributes:
+  persistVolumes: 'false'
+projects:
+  - name: pr-874
+    source:
+      type: git
+      location: 'https://github.com/eclipse/che-theia.git'
+      branch: 'fix-release'
+components:
+  - reference: https://raw.githubusercontent.com/chepullreq4/pr-check-files/master/che-theia/pr-874/simple/che-theia-editor.yaml
+    type: cheEditor
+
