@@ -1,0 +1,16 @@
+
+apiVersion: 1.0.0
+
+  generateName: pr-che_theia-879-
+attributes:
+  persistVolumes: 'false'
+projects:
+  - name: pr-879
+    source:
+      type: git
+      location: 'https://github.com/eclipse/che-theia.git'
+      branch: 'fix-publishing'
+components:
+  - reference: https://raw.githubusercontent.com/chepullreq4/pr-check-files/master/che-theia/pr-879/simple/che-theia-editor.yaml
+    type: cheEditor
+
