@@ -1,0 +1,16 @@
+
+apiVersion: 1.0.0
+
+  generateName: pr-che_theia-884-
+attributes:
+  persistVolumes: 'false'
+projects:
+  - name: pr-884
+    source:
+      type: git
+      location: 'https://github.com/eclipse/che-theia.git'
+      branch: 'share'
+components:
+  - reference: https://raw.githubusercontent.com/chepullreq4/pr-check-files/master/che-theia/pr-884/simple/che-theia-editor.yaml
+    type: cheEditor
+
