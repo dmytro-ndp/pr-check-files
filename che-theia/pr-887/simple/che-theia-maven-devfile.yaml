@@ -9,7 +9,9 @@ projects:
     branch: java1.11
 components:
 - type: chePlugin
-  id: redhat/java11/latest
+  id: redhat/java/latest
+  preferences:
+    java.server.launchMode: Standard
 - type: dockerimage
   alias: maven
   image: quay.io/eclipse/che-java11-maven:nightly
