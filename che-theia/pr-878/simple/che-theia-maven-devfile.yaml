@@ -9,7 +9,9 @@ projects:
     branch: java1.11
 components:
 - type: chePlugin
-  id: redhat/java11/latest
+  id: redhat/java/latest
+  preferences:
+    java.server.launchMode: Standard
 - type: dockerimage
   alias: maven
   image: quay.io/eclipse/che-java11-maven:nightly
@@ -33,6 +35,11 @@ components:
   volumes:
   - name: m2
     containerPath: /home/user/.m2
+  endpoints:
+  - name: debug
+    port: 5005
+    attributes:
+      public: "false"
 - reference: https://raw.githubusercontent.com/chepullreq4/pr-check-files/master/che-theia/pr-878/simple/che-theia-editor.yaml
   type: cheEditor
 commands:
