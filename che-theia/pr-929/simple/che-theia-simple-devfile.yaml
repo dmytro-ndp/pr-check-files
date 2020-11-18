@@ -1,0 +1,16 @@
+
+apiVersion: 1.0.0
+metadata:
+  generateName: pr-che_theia-929-
+attributes:
+  persistVolumes: 'false'
+projects:
+  - name: pr-929
+    source:
+      type: git
+      location: 'https://github.com/benoitf/che-theia.git'
+      branch: 'bump-nodejs-12-18-4'
+components:
+  - reference: https://raw.githubusercontent.com/chepullreq4/pr-check-files/master/che-theia/pr-929/simple/che-theia-editor.yaml
+    type: cheEditor
+
