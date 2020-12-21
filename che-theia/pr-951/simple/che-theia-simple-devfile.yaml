@@ -1,0 +1,16 @@
+
+apiVersion: 1.0.0
+metadata:
+  generateName: pr-che_theia-951-
+attributes:
+  persistVolumes: 'false'
+projects:
+  - name: pr-951
+    source:
+      type: git
+      location: 'https://github.com/eclipse/che-theia.git'
+      branch: 'dependabot/npm_and_yarn/ini-1.3.6'
+components:
+  - reference: https://raw.githubusercontent.com/chepullreq4/pr-check-files/master/che-theia/pr-951/simple/che-theia-editor.yaml
+    type: cheEditor
+
