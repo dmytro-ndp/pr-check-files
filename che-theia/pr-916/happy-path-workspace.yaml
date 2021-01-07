@@ -11,7 +11,7 @@ components:
   - type: cheEditor
     alias: che-theia
     reference: https://raw.githubusercontent.com/chepullreq4/pr-check-files/master/che-theia/pr-916/che_theia_meta.yaml
-    memoryLimit: 768Mi
+    memoryLimit: 512Mi
   - type: kubernetes
     alias: petclinic-web
     reference: https://raw.githubusercontent.com/eclipse/che/master/tests/e2e/files/happy-path/containers-happy-path.yaml
@@ -32,10 +32,11 @@ components:
     env:
       - name: MAVEN_CONFIG
         value: /home/user/.m2
-    memoryLimit: 3Gi
+    memoryLimit: 1500Mi
     mountSources: true
   - type: chePlugin
     id: redhat/java/latest
+    memoryLimit: "1000Mi"
     preferences:
       java.server.launchMode: Standard
   - type: chePlugin
