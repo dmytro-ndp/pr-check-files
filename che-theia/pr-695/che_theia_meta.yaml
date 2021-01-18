@@ -89,6 +89,8 @@ spec:
     volumes:
     - name: plugins
       mountPath: /plugins
+    - name: workspaceStorage
+      mountPath: /home/theia/.theia/workspace-storage
   initContainers:
   - name: remote-runtime-injector
     image: maxura/che-theia-endpoint-runtime-binary:695
@@ -101,4 +103,4 @@ spec:
     - name: remote-endpoint
       mountPath: /remote-endpoint
       ephemeral: true
-latestUpdateDate: "2021-01-14"
+latestUpdateDate: "2021-01-18"
