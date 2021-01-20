@@ -101,4 +101,4 @@ spec:
     - name: remote-endpoint
       mountPath: /remote-endpoint
       ephemeral: true
-latestUpdateDate: "2021-01-08"
+latestUpdateDate: "2021-01-20"
