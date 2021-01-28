@@ -10,6 +10,7 @@ icon: /v3/images/eclipse-che-logo.png
 category: Editor
 repository: https://github.com/eclipse/che-theia
 firstPublicationDate: "2019-03-07"
+latestUpdateDate: "2021-01-28"
 spec:
   endpoints:
   - name: theia
@@ -86,9 +87,13 @@ spec:
     - exposedPort: 13132
     - exposedPort: 13133
     memoryLimit: 512M
+    cpuLimit: 1500m
+    cpuRequest: 500m
     volumes:
     - name: plugins
       mountPath: /plugins
+    - name: theia-local
+      mountPath: /home/theia/.theia
   initContainers:
   - name: remote-runtime-injector
     image: maxura/che-theia-endpoint-runtime-binary:695
@@ -101,4 +106,3 @@ spec:
     - name: remote-endpoint
       mountPath: /remote-endpoint
       ephemeral: true
-latestUpdateDate: "2021-01-19"
