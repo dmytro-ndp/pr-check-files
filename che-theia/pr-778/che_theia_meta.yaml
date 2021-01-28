@@ -86,9 +86,13 @@ spec:
     - exposedPort: 13132
     - exposedPort: 13133
     memoryLimit: 512M
+    cpuLimit: 1500m
+    cpuRequest: 500m
     volumes:
     - name: plugins
       mountPath: /plugins
+    - name: theia-local
+      mountPath: /home/theia/.theia
   initContainers:
   - name: remote-runtime-injector
     image: maxura/che-theia-endpoint-runtime-binary:778
@@ -101,4 +105,4 @@ spec:
     - name: remote-endpoint
       mountPath: /remote-endpoint
       ephemeral: true
-latestUpdateDate: "2021-01-19"
+latestUpdateDate: "2021-01-25"
