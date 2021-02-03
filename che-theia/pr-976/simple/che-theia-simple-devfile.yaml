@@ -1,0 +1,16 @@
+
+apiVersion: 1.0.0
+metadata:
+  generateName: pr-che_theia-976-
+attributes:
+  persistVolumes: 'false'
+projects:
+  - name: pr-976
+    source:
+      type: git
+      location: 'https://github.com/eclipse/che-theia.git'
+      branch: 'downgrade-markdown'
+components:
+  - reference: https://raw.githubusercontent.com/chepullreq4/pr-check-files/master/che-theia/pr-976/simple/che-theia-editor.yaml
+    type: cheEditor
+
