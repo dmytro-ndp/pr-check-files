@@ -10,7 +10,7 @@ icon: /v3/images/eclipse-che-logo.png
 category: Editor
 repository: https://github.com/eclipse/che-theia
 firstPublicationDate: "2019-03-07"
-latestUpdateDate: "2021-02-02"
+latestUpdateDate: "2021-02-05"
 spec:
   endpoints:
   - name: theia
@@ -88,7 +88,7 @@ spec:
     - exposedPort: 13133
     memoryLimit: 512M
     cpuLimit: 1500m
-    cpuRequest: 500m
+    cpuRequest: 100m
     volumes:
     - name: plugins
       mountPath: /plugins
