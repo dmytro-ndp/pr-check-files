@@ -1,0 +1,16 @@
+
+apiVersion: 1.0.0
+metadata:
+  generateName: pr-che_theia-986-
+attributes:
+  persistVolumes: 'false'
+projects:
+  - name: pr-986
+    source:
+      type: git
+      location: 'https://github.com/eclipse/che-theia.git'
+      branch: 'upstream-repo'
+components:
+  - reference: https://raw.githubusercontent.com/chepullreq4/pr-check-files/master/che-theia/pr-986/simple/che-theia-editor.yaml
+    type: cheEditor
+
