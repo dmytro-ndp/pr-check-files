@@ -1,0 +1,16 @@
+
+apiVersion: 1.0.0
+metadata:
+  generateName: pr-che_theia-991-
+attributes:
+  persistVolumes: 'false'
+projects:
+  - name: pr-991
+    source:
+      type: git
+      location: 'https://github.com/eclipse/che-theia.git'
+      branch: 'gh-release'
+components:
+  - reference: https://raw.githubusercontent.com/chepullreq4/pr-check-files/master/che-theia/pr-991/simple/che-theia-editor.yaml
+    type: cheEditor
+
