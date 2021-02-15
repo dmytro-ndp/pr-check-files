@@ -6,10 +6,11 @@ type: Che Editor
 displayName: theia-ide
 title: Eclipse Theia development version.
 description: Eclipse Theia, get the latest release each day.
-icon: https://raw.githubusercontent.com/theia-ide/theia/master/logo/theia-logo-no-text-black.svg?sanitize=true
+icon: /v3/images/eclipse-che-logo.png
 category: Editor
 repository: https://github.com/eclipse/che-theia
 firstPublicationDate: "2019-03-07"
+latestUpdateDate: "2021-02-11"
 spec:
   endpoints:
   - name: theia
@@ -27,6 +28,16 @@ spec:
     attributes:
       protocol: http
       type: webview
+      secure: true
+      cookiesAuthEnabled: true
+      discoverable: false
+      unique: true
+  - name: mini-browser
+    public: true
+    targetPort: 3100
+    attributes:
+      protocol: http
+      type: mini-browser
       secure: true
       cookiesAuthEnabled: true
       discoverable: false
@@ -68,9 +79,6 @@ spec:
       value: "3130"
     - name: THEIA_HOST
       value: 127.0.0.1
-    volumes:
-    - mountPath: /plugins
-      name: plugins
     mountSources: true
     ports:
     - exposedPort: 3100
@@ -79,15 +87,22 @@ spec:
     - exposedPort: 13132
     - exposedPort: 13133
     memoryLimit: 512M
+    cpuLimit: 1500m
+    cpuRequest: 100m
+    volumes:
+    - name: plugins
+      mountPath: /plugins
+    - name: theia-local
+      mountPath: /home/theia/.theia
   initContainers:
   - name: remote-runtime-injector
     image: maxura/che-theia-endpoint-runtime-binary:809
-    volumes:
-    - mountPath: /remote-endpoint
-      name: remote-endpoint
-      ephemeral: true
     env:
     - name: PLUGIN_REMOTE_ENDPOINT_EXECUTABLE
       value: /remote-endpoint/plugin-remote-endpoint
     - name: REMOTE_ENDPOINT_VOLUME_NAME
       value: remote-endpoint
+    volumes:
+    - name: remote-endpoint
+      mountPath: /remote-endpoint
+      ephemeral: true

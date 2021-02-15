@@ -7,12 +7,16 @@ projects:
     type: git
     location: https://github.com/che-samples/web-nodejs-sample.git
 components:
+- type: cheEditor
+  reference: https://raw.githubusercontent.com/chepullreq4/pr-check-files/master/che-theia/pr-809/simple/che-theia-editor.yaml
 - type: chePlugin
   id: che-incubator/typescript/latest
   memoryLimit: 512Mi
 - type: chePlugin
   id: ms-vscode/node-debug2/latest
-- type: cheEditor
+  preferences:
+    debug.node.useV3: false
+- type: dockerimage
   alias: nodejs
   image: quay.io/eclipse/che-nodejs10-ubi:nightly
   memoryLimit: 512Mi
@@ -20,7 +24,6 @@ components:
   - name: nodejs
     port: 3000
   mountSources: true
-  reference: https://raw.githubusercontent.com/chepullreq4/pr-check-files/master/che-theia/pr-809/simple/che-theia-editor.yaml
 commands:
 - name: download dependencies
   actions:
