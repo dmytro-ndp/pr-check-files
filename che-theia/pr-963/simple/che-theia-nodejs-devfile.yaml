@@ -11,7 +11,6 @@ components:
   reference: https://raw.githubusercontent.com/chepullreq4/pr-check-files/master/che-theia/pr-963/simple/che-theia-editor.yaml
 - type: chePlugin
   id: che-incubator/typescript/latest
-  memoryLimit: 512Mi
 - type: chePlugin
   id: ms-vscode/node-debug2/latest
   preferences:
