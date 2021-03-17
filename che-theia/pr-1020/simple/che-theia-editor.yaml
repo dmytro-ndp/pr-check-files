@@ -10,7 +10,7 @@ icon: /v3/images/eclipse-che-logo.png
 category: Editor
 repository: https://github.com/eclipse/che-theia
 firstPublicationDate: "2019-03-07"
-latestUpdateDate: "2021-03-09"
+latestUpdateDate: "2021-03-15"
 spec:
   endpoints:
   - name: theia
@@ -67,6 +67,15 @@ spec:
     attributes:
       protocol: http
       discoverable: false
+  - name: terminal
+    public: true
+    targetPort: 3333
+    attributes:
+      protocol: ws
+      type: collocated-terminal
+      discoverable: false
+      secure: true
+      cookiesAuthEnabled: true
   containers:
   - name: theia-ide
     image: quay.io/crw_pr/che-theia:1020
@@ -94,6 +103,14 @@ spec:
       mountPath: /plugins
     - name: theia-local
       mountPath: /home/theia/.theia
+  - name: che-machine-exec
+    image: quay.io/eclipse/che-machine-exec:nightly
+    ports:
+    - exposedPort: 3333
+    command:
+    - /go/bin/che-machine-exec
+    - --url
+    - 127.0.0.1:3333
   initContainers:
   - name: remote-runtime-injector
     image: quay.io/crw_pr/che-theia-endpoint-runtime-binary:1020
