@@ -1,0 +1,16 @@
+
+apiVersion: 1.0.0
+metadata:
+  generateName: pr-che_theia-1034-
+attributes:
+  persistVolumes: 'false'
+projects:
+  - name: pr-1034
+    source:
+      type: git
+      location: 'https://github.com/benoitf/che-theia.git'
+      branch: 'DWO-161'
+components:
+  - reference: https://raw.githubusercontent.com/chepullreq4/pr-check-files/master/che-theia/pr-1034/simple/che-theia-editor.yaml
+    type: cheEditor
+
