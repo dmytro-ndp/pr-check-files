@@ -1,0 +1,16 @@
+
+apiVersion: 1.0.0
+metadata:
+  generateName: pr-che_theia-955-
+attributes:
+  persistVolumes: 'false'
+projects:
+  - name: pr-955
+    source:
+      type: git
+      location: 'https://github.com/tsmaeder/che-theia.git'
+      branch: '16852_no_source_links'
+components:
+  - reference: https://raw.githubusercontent.com/chepullreq4/pr-check-files/master/che-theia/pr-955/simple/che-theia-editor.yaml
+    type: cheEditor
+
