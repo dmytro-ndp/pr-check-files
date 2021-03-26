@@ -1,0 +1,16 @@
+
+apiVersion: 1.0.0
+metadata:
+  generateName: pr-che_theia-1056-
+attributes:
+  persistVolumes: 'false'
+projects:
+  - name: pr-1056
+    source:
+      type: git
+      location: 'https://github.com/eclipse-che/che-theia.git'
+      branch: 'pr-new-theia-base-images'
+components:
+  - reference: https://raw.githubusercontent.com/chepullreq4/pr-check-files/master/che-theia/pr-1056/simple/che-theia-editor.yaml
+    type: cheEditor
+
