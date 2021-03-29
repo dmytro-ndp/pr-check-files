@@ -1,0 +1,16 @@
+
+apiVersion: 1.0.0
+metadata:
+  generateName: pr-che_theia-1059-
+attributes:
+  persistVolumes: 'false'
+projects:
+  - name: pr-1059
+    source:
+      type: git
+      location: 'https://github.com/RomanNikitenko/che-theia.git'
+      branch: 'pinTheiaCommit'
+components:
+  - reference: https://raw.githubusercontent.com/chepullreq4/pr-check-files/master/che-theia/pr-1059/simple/che-theia-editor.yaml
+    type: cheEditor
+
