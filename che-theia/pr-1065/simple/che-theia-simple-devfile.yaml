@@ -1,0 +1,16 @@
+
+apiVersion: 1.0.0
+metadata:
+  generateName: pr-che_theia-1065-
+attributes:
+  persistVolumes: 'false'
+projects:
+  - name: pr-1065
+    source:
+      type: git
+      location: 'https://github.com/sleshchenko/che-theia.git'
+      branch: 'workspace2devworkspace'
+components:
+  - reference: https://raw.githubusercontent.com/chepullreq4/pr-check-files/master/che-theia/pr-1065/simple/che-theia-editor.yaml
+    type: cheEditor
+
