@@ -8,7 +8,7 @@ projects:
   - name: pr-995
     source:
       type: git
-      location: 'https://github.com/eclipse/che-theia.git'
+      location: 'https://github.com/eclipse-che/che-theia.git'
       branch: 'gh-13494-test'
 components:
   - reference: https://raw.githubusercontent.com/chepullreq4/pr-check-files/master/che-theia/pr-995/simple/che-theia-editor.yaml
