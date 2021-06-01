@@ -6,11 +6,11 @@ type: Che Editor
 displayName: theia-ide (PR 1117)
 title: Eclipse Theia development version.
 description: Eclipse Theia, get the latest release each day.
-icon: /v3/images/eclipse-che-logo.png
+icon: /images/eclipse-che-logo.png
 category: Editor
 repository: https://github.com/eclipse-che/che-theia
 firstPublicationDate: "2019-03-07"
-latestUpdateDate: "2021-05-31"
+latestUpdateDate: "2021-06-01"
 spec:
   endpoints:
   - name: theia
