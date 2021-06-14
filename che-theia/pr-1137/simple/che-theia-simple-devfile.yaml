@@ -1,0 +1,16 @@
+
+apiVersion: 1.0.0
+metadata:
+generateName: pr-che_theia-1137-
+        attributes:
+persistVolumes: 'false'
+projects:
+- name: pr-1137
+source:
+type: git
+location: 'https://github.com/benoitf/che-theia.git'
+branch: 'use-api-find'
+components:
+- reference: https://raw.githubusercontent.com/chepullreq4/pr-check-files/master/che-theia/pr-1137/simple/che-theia-editor.yaml
+type: cheEditor
+
