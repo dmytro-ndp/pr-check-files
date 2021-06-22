@@ -1,0 +1,14 @@
+
+apiVersion: 1.0.0
+metadata:
+generateName: pr-che_theia-1153-
+projects:
+- name: pr-1153
+source:
+type: git
+location: 'https://github.com/benoitf/che-theia.git'
+branch: 'cleanup'
+components:
+- reference: https://raw.githubusercontent.com/chepullreq4/pr-check-files/master/che-theia/pr-1153/simple/che-theia-editor.yaml
+type: cheEditor
+
