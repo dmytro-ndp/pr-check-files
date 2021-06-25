@@ -1,0 +1,14 @@
+
+apiVersion: 1.0.0
+metadata:
+generateName: pr-che_theia-1155-
+projects:
+- name: pr-1155
+source:
+type: git
+location: 'https://github.com/eclipse-che/che-theia.git'
+branch: 'refactor-welcome-plugin'
+components:
+- reference: https://raw.githubusercontent.com/chepullreq4/pr-check-files/master/che-theia/pr-1155/simple/che-theia-editor.yaml
+type: cheEditor
+
