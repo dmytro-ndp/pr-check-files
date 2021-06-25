@@ -10,7 +10,7 @@ components:
 - type: cheEditor
   reference: https://raw.githubusercontent.com/chepullreq4/pr-check-files/master/che-theia/pr-1123/simple/che-theia-editor.yaml
 - type: chePlugin
-  id: che-incubator/typescript/latest
+  id: vscode/typescript-language-features/latest
 - type: chePlugin
   id: ms-vscode/node-debug2/latest
   preferences:
