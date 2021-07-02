@@ -1,16 +1,14 @@
 
 apiVersion: 1.0.0
 metadata:
-  generateName: pr-che_theia-1049-
-attributes:
-  persistVolumes: 'false'
+generateName: pr-che_theia-1049-
 projects:
-  - name: pr-1049
-    source:
-      type: git
-      location: 'https://github.com/RomanNikitenko/che-theia.git'
-      branch: 'test-upstream'
+- name: pr-1049
+source:
+type: git
+location: 'https://github.com/RomanNikitenko/che-theia.git'
+branch: 'test-upstream'
 components:
-  - reference: https://raw.githubusercontent.com/chepullreq4/pr-check-files/master/che-theia/pr-1049/simple/che-theia-editor.yaml
-    type: cheEditor
+- reference: https://raw.githubusercontent.com/chepullreq4/pr-check-files/master/che-theia/pr-1049/simple/che-theia-editor.yaml
+type: cheEditor
 

@@ -5,19 +5,19 @@ projects:
 - name: nodejs-web-app
   source:
     type: git
-    location: https://github.com/che-samples/web-nodejs-sample.git
+    location: https://github.com/che-samples/web-nodejs-sample
 components:
 - type: cheEditor
   reference: https://raw.githubusercontent.com/chepullreq4/pr-check-files/master/che-theia/pr-1049/simple/che-theia-editor.yaml
 - type: chePlugin
-  id: che-incubator/typescript/latest
+  id: vscode/typescript-language-features/latest
 - type: chePlugin
   id: ms-vscode/node-debug2/latest
   preferences:
     debug.node.useV3: false
 - type: dockerimage
   alias: nodejs
-  image: quay.io/eclipse/che-nodejs10-ubi:nightly
+  image: quay.io/eclipse/che-nodejs10-ubi:next
   memoryLimit: 512Mi
   endpoints:
   - name: nodejs
@@ -68,4 +68,4 @@ commands:
         ]
       }
 attributes:
-  persistVolumes: "false"
+  persistVolumes: false
