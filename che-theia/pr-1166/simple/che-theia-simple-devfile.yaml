@@ -1,0 +1,14 @@
+
+apiVersion: 1.0.0
+metadata:
+generateName: pr-che_theia-1166-
+projects:
+- name: pr-1166
+source:
+type: git
+location: 'https://github.com/eclipse-che/che-theia.git'
+branch: 'che-19837'
+components:
+- reference: https://raw.githubusercontent.com/chepullreq4/pr-check-files/master/che-theia/pr-1166/simple/che-theia-editor.yaml
+type: cheEditor
+
